@@ -1,5 +1,4 @@
 import { users } from "./moduleA";
-
 import "./moduleGenerator";
 
 users.forEach(element => {
