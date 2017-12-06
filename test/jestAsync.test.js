@@ -8,7 +8,7 @@ function asyncCode() {
 }
 
 
-describe('Async suite - 3 ways', () => {
+describe.skip('Async suite - 3 ways', () => {
     test('return a promise', () => {
         // 1. specify how many assertions (e.g. expects) should be called
         expect.assertions(1);

@@ -1,0 +1,7 @@
+{
+    "verbose": true,
+    "moduleDirectories": [
+        "src",
+        "node_modules"
+    ]
+}

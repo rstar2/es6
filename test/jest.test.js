@@ -3,13 +3,12 @@ const myBeverage = {
     sour: false,
 };
 
-
 describe('Suite', () => {
     beforeAll(() => {
-        console.log('Before all');
+        //console.log('Before all');
     });
     beforeEach(() => {
-        console.log('Before each');
+        //console.log('Before each');
     });
 
     test('is delicious', () => {
