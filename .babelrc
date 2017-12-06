@@ -1,0 +1,18 @@
+{
+    "presets": [
+        "es2015"
+    ],
+    "sourceMaps": true,
+    "retainLines": true,
+
+
+    // needed to have ES6 support through Babel in the Jest test
+    // this .babelrc is all that is needed together with installed babel-jest
+    "env": {
+        "test": {
+            "presets": [
+                "es2015"
+            ]
+        }
+    }
+}
