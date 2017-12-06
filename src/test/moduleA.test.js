@@ -1,5 +1,5 @@
 import { users } from '../js/moduleA';
 
-it('users', () => {
+test('users', () => {
     expect(users.length).toBe(2);
 });
