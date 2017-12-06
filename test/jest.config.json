@@ -1,7 +1,7 @@
 {
     "verbose": true,
     "moduleDirectories": [
-        "src",
+        "src/js",
         "node_modules"
     ]
 }

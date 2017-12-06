@@ -1,4 +1,4 @@
-import { getVAT } from 'js/moduleAsync';
+import { getVAT } from '../src/js/moduleAsync';
 
 
 test('VAT for Germany', async () => {
