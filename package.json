@@ -5,6 +5,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest --config test/jest.config.json",
+    "test:watch": "npm test -- --watch",
+    "test:e2e": "jest --config test/e2e/jest.config.json",
     "build": "webpack",
     "watch": "webpack --watch",
     "serve": "serve ./public"
