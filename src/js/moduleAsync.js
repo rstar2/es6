@@ -6,7 +6,7 @@ const API_KEY = 'abbf42bdd2b0d7fc13934e494532e58e';
 
 getVAT('DE').
     then(data => {
-        console.log(data);
+        //console.log(data);
     });
 
 /**
