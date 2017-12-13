@@ -1,7 +1,6 @@
-import { users } from '../src/js/noModule';
+test('global non-module JS', () => {
+    expect(NoModuleA.STATIC_VAR).toBe(100);
 
-// TODO: Find a way to load the noModule.js files which is no CommonJS/ES6
-test.skip('static', () => {
-    console.log(NoModule);
-    expect(NoModule.STATIC_VAR).toBe(100);
+    let noModuleA = new NoModuleA(10);
+    expect(noModuleA.getValue()).toBe(20);
 });
