@@ -1,4 +1,4 @@
-{
+module.exports = {
     "verbose": true,
     "moduleDirectories": [
         "src/js",

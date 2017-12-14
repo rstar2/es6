@@ -1,3 +1,5 @@
+// we have access to globals like - window
+
 var NoModuleA = function (value) {
     this._value = new NoModuleB(value);
 };

@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "jest --config __tests__/jest.config.json",
+    "test": "jest --config __tests__/jest.config.js",
     "test:watch": "npm test -- --watch",
     "test:e2e": "jest --config __tests__/e2e/jest.config.json",
     "build": "webpack",
