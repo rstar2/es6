@@ -1,10 +1,10 @@
 module.exports = {
-    "verbose": true,
-    "moduleDirectories": [
-        "src/js",
-        "node_modules"
+    'verbose': true,
+    'moduleDirectories': [
+        'src/js',
+        'node_modules'
     ],
-    "testPathIgnorePatterns": ["<rootDir>/e2e/"],
-    "testMatch": ["**/?(*.)(spec|test).js"],
-    "setupFiles": ["./jest.setup.js"]
-}
+    'testPathIgnorePatterns': ['<rootDir>/e2e/'],
+    'testMatch': ['**/?(*.)(spec|test).js'],
+    'setupFiles': ['./jest.setup.js']
+};

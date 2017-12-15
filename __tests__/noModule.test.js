@@ -1,3 +1,5 @@
+/* globals NoModuleA:false */
+
 test('global non-module JS', () => {
     expect(NoModuleA.STATIC_VAR).toBe(100);
 

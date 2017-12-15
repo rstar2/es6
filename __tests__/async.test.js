@@ -16,14 +16,14 @@ describe.skip('Async suite - 3 ways', () => {
         // 2. Be sure to return a Promise
         return asyncCode().then(res => {
             expect(res).toBe(1);
-        })
+        });
     });
 
     test('call a "done" callback', (done) => {
         asyncCode().then(res => {
             expect(res).toBe(1);
             done();
-        })
+        });
     });
 
     test('use async/await', async () => {
