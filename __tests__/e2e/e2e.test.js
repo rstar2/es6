@@ -15,7 +15,7 @@ let page;
 let browser;
 const width = 1080;
 const height = 800;
-const APP = "https://www.abv.bg";
+const APP = 'https://www.abv.bg';
 
 describe('E2E Suite', () => {
     beforeAll(async () => {
@@ -32,23 +32,23 @@ describe('E2E Suite', () => {
         browser.close();
     });
 
-    test.skip("open page", async () => {
+    test.skip('open page', async () => {
         // open page
         await page.goto(`${APP}`);
         const text = await page.content();
-        expect(text).toContain("Вход в АБВ Поща")
+        expect(text).toContain('Вход в АБВ Поща')
     }, 16000); // wait for maximum 16 seconds
 
-    test("styles", async () => {
+    test.skip('styles', async () => {
         // open page
         await page.goto(`${APP}`);
 
         // wait for the form to appear and fill it
-        await page.waitForSelector("#mobileVersion");
+        await page.waitForSelector('#mobileVersion');
         const mobileHref = await page.$eval('#mobileVersion', el => el.href);
         console.log(mobileHref);
 
-        const form = await page.$eval("#loginForm", el => el.innerHTML);
+        const form = await page.$eval('#loginForm', el => el.innerHTML);
         console.log(form);
 
         await page.evaluate(() => {
@@ -60,22 +60,23 @@ describe('E2E Suite', () => {
 
     }, 16000); // wait for maximum 16 seconds
 
-    test.skip("login fail", async () => {
+    test('login fail', async () => {
         // open page
         await page.goto(`${APP}`);
 
         // wait for the form to appear and fill it
-        await page.waitForSelector("#loginForm");
-        await page.click("input#username");
+        await page.waitForSelector('#loginForm');
+        await page.click('input#username');
         await page.keyboard.type(data.name);
-        await page.click("input#password");
+        await page.click('input#password');
         await page.keyboard.type(data.password);
-        await page.click("input#loginBut");
+        await page.click('input#loginBut');
 
-        //await page.waitForNavigation();
-        await page.waitFor(5000);
+        // await page.waitForNavigation();
+        // await page.waitFor(5000);
+        await page.waitForSelector('#form.errors');
 
         const text = await page.content();
         expect(text).toContain('Грешен потребител')
-    }, 100000); // wait for maximum 16 seconds
+    }, 160000); // wait for maximum 16 seconds
 });
