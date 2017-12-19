@@ -1,8 +1,4 @@
 {
     "verbose": true,
-    "moduleDirectories": [
-        "src/js",
-        "node_modules"
-    ],
     "testPathIgnorePatterns": []
 }
