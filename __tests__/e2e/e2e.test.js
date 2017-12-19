@@ -39,6 +39,8 @@ describe('E2E Suite', () => {
     test('open page', async () => {
         // open page
         await page.goto(`${APP}`);
+        //await page.waitForNavigation();
+        await page.waitForSelector('#formLOGIN');
 
         const title = await page.title();
         expect(title).toBe('FileFlex Secure File Access');
@@ -46,28 +48,7 @@ describe('E2E Suite', () => {
         expect(text).toContain('Login to FileFlex Secure File Access');
     });
 
-    // test.skip('styles', async () => {
-    //     // open page
-    //     await page.goto(`${APP}`);
-
-    //     // wait for the form to appear and fill it
-    //     await page.waitForSelector('#mobileVersion');
-    //     const mobileHref = await page.$eval('#mobileVersion', el => el.href);
-    //     console.log(mobileHref);
-
-    //     const form = await page.$eval('#loginForm', el => el.innerHTML);
-    //     console.log(form);
-
-    //     await page.evaluate(() => {
-    //         //document.getElementById();
-    //     });
-
-    //     // TODO: check for class/style
-    //     //expect(el).toBeTruthy();
-
-    // });
-
-    test.skip('Invalid email', async () => {
+    test('Invalid email', async () => {
         // open page
         await page.goto(`${APP}`);
         // wait for the form to appear
@@ -83,7 +64,7 @@ describe('E2E Suite', () => {
         expect(error).toBe('Invalid email');
     });
 
-    test.skip('This user does not use application', async () => {
+    test('This user does not use application', async () => {
         // open page
         await page.goto(`${APP}`);
         
@@ -96,8 +77,8 @@ describe('E2E Suite', () => {
         // wait for the password to appear
         await page.waitForSelector('#errorCont');
         
-        const error = await page.$eval('.separateError', el => el.textContent);
-        expect(error).toBe('This user does not use application');
+        const error = await page.$eval('#errorCont .warningBox', el => el.textContent);
+        expect(error).toContain('This user does not use application');
     }); 
 
     test.skip('Invalid password', async () => {
