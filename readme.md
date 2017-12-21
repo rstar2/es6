@@ -106,5 +106,18 @@ $ npm install -D @types/jest
         }
 ```
 
+5. Building
+- With webpack. Output the bundle in public/... - e.g. uses webpack.config.js
+
+```
+$ npm run build
+```
+
+- With Microbuild - don't support object-destructions ({...data}) and generator functions. Output the bundle in public/....
+It 's zero configuration - uses the package.json ("source" field for input and "main" field for output )
+
+```
+$ npm run build:micro
+```
 
     
